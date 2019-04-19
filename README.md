@@ -1,4 +1,4 @@
-1. created a go application file.
+1. Created a go application file.
 
 2. create Docker file using that application 
 $ cat Dockerfile
@@ -14,13 +14,13 @@ EXPOSE 8080
 
 4.Login the docker hub in terminal using "docker login"
 
-5. our own Docker image we need to tag using "docker tag <container ID > <reponam:tag> 
+5. Our own Docker image we need to tag using "docker tag <container ID> <reponam:tag> 
 
 6.Docker push <image>
 
 7.Create a YAML file 
 
- cat pod.yaml
+$cat pod.yaml
 apiVersion: v1
 kind: ReplicationController
 metadata:
@@ -46,5 +46,5 @@ spec:
 9. To verify the running container 
 docker exec -ti <container ID> bash
 
-using curl command we can verify the application running inside the container
+Using curl command we can verify the application running inside the container
 curl localhost:8080/home
