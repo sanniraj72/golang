@@ -1,7 +1,8 @@
 FROM golang:latest
-RUN mkdir app/src/
-WORKDIR app/src/
-COPY . app/src/
+RUN mkdir app && cd app
+WORKDIR app/
+COPY . .
 RUN go build main.go
-CMD ["/app/src/main"]
+CMD ["./main"]
+EXPOSE 8080
 
