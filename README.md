@@ -28,7 +28,8 @@ EXPOSE 8080
 
 **5.** Before pushing to docker hub we have to tag it using -
        ```docker tag <container ID> <reponame:tag> ```
-    e.g. - docker tag <container-id> sannidocker/myfirstrepository:myimagev1.0
+       
+   **e.g.**  docker tag <container-id> sannidocker/myfirstrepository:myimagev1.0
 
 **6.** After tag now you can push the image using command 
        ```Docker push <image>```
@@ -64,9 +65,12 @@ spec:
 **9.** To verify the api, enter into the bash of container using command
         ```docker exec -it <container ID> bash```
 
-**10.** Inside container use curl command to see the result - 
-        curl [localhost:8080/home]
-        curl [localhost:8080/countries]
+**10.** Inside container use curl command to see the result 
+
+        ```
+        curl localhost:8080/home
+        curl localhost:8080/countries
+        ```
         
 **NOTE:** When you are giving imagename in pod.yaml file, then it will search locally. But if image not found locally             then to get from your "dockerhub" repository, you should login to dockerhub from terminal and imagename must be             prefix with the repo name.
 
