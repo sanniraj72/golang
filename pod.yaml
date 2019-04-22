@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: goapi
+  name: goapi5
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     app: goapi
   template:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: web-server
-        image: myimage:v1.0
+        image: sannidocker/myfirstrepository:myimagev1.0
         ports:
         - containerPort: 80
