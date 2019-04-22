@@ -1,4 +1,4 @@
-# Process of Deploying a simple api service (GoLang) using Kubernetes 
+# Process of Deploying a simple api service (GoLang) using Kubernetes (Example of 'ReplicationController')
 
 **1.** I have created a simple api-service using go. That will show /home page and /countries.
 
@@ -69,3 +69,7 @@ spec:
         curl [localhost:8080/countries]
         
 **NOTE:** When you are giving imagename in pod.yaml file, then it will search locally. But if image not found locally             then to get from your "dockerhub" repository, you should login to dockerhub from terminal and imagename must be             prefix with the repo name.
+
+**11.** If we delete any pod, then a new pod will come up as we have defined a ReplicationController.
+        You can try this with this command ```kubectl delete pods <pod>```
+        If you give the above command then the particular pod will be deleted. But in place of that pod 1 new pod will come         up. That you can verify using ```kubectl get pods``` command.
